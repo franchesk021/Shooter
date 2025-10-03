@@ -9,7 +9,7 @@ background = transform.scale(image.load('galaxy.jpg'),(700,500))
 
 mixer.init()
 mixer.music.load('space.ogg')
-#mixer.music.play()
+mixer.music.play()
 mixer.music.set_volume(0.5)
 fire = mixer.Sound('fire.ogg')
 
@@ -239,16 +239,6 @@ while game:
     asteroids.draw(window)
 
 
-
-    
-
-
-
-
-
-
-
-
     draw_counter(10,30,f'Пропущено: {miss_score}')
     draw_counter(10,10,f'Баллы: {score}')
 
@@ -257,9 +247,9 @@ while game:
 
     if finish:
         if result == 'win':
-            draw_result('YOU WIN',350,250,60,(100,255,100))
+            draw_result('Ты выиграл!',350,250,60,(100,255,100))
         elif result == 'lose':
-            draw_result('YOU LOSE',350,250,60,(255,100,100))
+            draw_result('Ты проиграл(',350,250,60,(255,100,100))
 
     display.update()
     dt = clock.tick(120) / 1000
